@@ -1,0 +1,28 @@
+{
+  "name": "ditap-curriculum-update-website",
+  "version": "1.0.0",
+  "description": "DITAP Curriculum Update project website with accessibility testing",
+  "private": true,
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "lint:links": "linkinator . --recurse --silent --skip 'node_modules|playwright-report|test-results|.git|https?://'",
+    "lint:spell": "cspell \"**/*\" --config cspell.config.json",
+    "test:ci": "npm test && npm run lint:links && npm run lint:spell"
+  },
+  "keywords": [
+    "ditap",
+    "accessibility",
+    "federal-acquisition",
+    "uswds"
+  ],
+  "author": "CivicActions",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "@axe-core/playwright": "^4.9.0",
+    "@playwright/test": "^1.42.0",
+    "cspell": "^8.14.0",
+    "linkinator": "^4.0.0"
+  }
+}

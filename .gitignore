@@ -1,0 +1,21 @@
+# Ignore dependencies
+node_modules/
+
+# Ignore test results
+playwright-report/
+test-results/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Ignore logs
+*.log
+npm-debug.log*

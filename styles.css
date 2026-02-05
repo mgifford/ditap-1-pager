@@ -1,0 +1,230 @@
+/* Minimal custom CSS for visual interest and layout clarity */
+
+:root {
+  --color-bg: #ffffff;
+  --color-text: #1b1b1b;
+  --color-emphasis: #005ea2;
+  --color-highlight-bg: #f0f0f0;
+  --color-surface-footer: #1b1b1b;
+  --color-link-footer: #58b4ff;
+}
+
+html.theme-dark {
+  --color-bg: #1b1b1b;
+  --color-text: #f0f0f0;
+  --color-emphasis: #58b4ff;
+  --color-highlight-bg: #202020;
+  --color-surface-footer: #000000;
+  --color-link-footer: #8fd0ff;
+}
+
+html.theme-light {
+  --color-bg: #ffffff;
+  --color-text: #1b1b1b;
+  --color-emphasis: #005ea2;
+  --color-highlight-bg: #f0f0f0;
+  --color-surface-footer: #1b1b1b;
+  --color-link-footer: #58b4ff;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+html.theme-dark body {
+  color: var(--color-text);
+}
+
+/* Project notice banner */
+.project-notice {
+  background-color: #f5f5f0;
+  border-bottom: 1px solid #d9d9d9;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.project-notice__text {
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+}
+
+.theme-toggle {
+  margin-left: auto;
+}
+
+.usa-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.theme-toggle__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0.5rem;
+  border-radius: 999px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.theme-toggle__icon {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.theme-toggle__icon--moon {
+  margin-left: 0.25rem;
+}
+
+/* Show only the icon that represents the next available mode */
+html.theme-light .theme-toggle__icon--sun {
+  display: none;
+}
+
+html.theme-light .theme-toggle__icon--moon {
+  display: inline;
+}
+
+html.theme-dark .theme-toggle__icon--sun {
+  display: inline;
+  color: #ffd65c; /* high-contrast sun icon on dark */
+}
+
+html.theme-dark .theme-toggle__icon--moon {
+  display: none;
+}
+
+/* Hero section styling */
+.hero-section {
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+.hero-section h1 {
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+  font-size: 2rem;
+}
+
+/* Section visual distinction */
+.section-highlight {
+  background-color: var(--color-highlight-bg);
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.section-cta {
+  border-top: 2px solid var(--color-emphasis);
+  border-bottom: 2px solid var(--color-emphasis);
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.quick-summary {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+/* Improve readability */
+main p {
+  max-width: 68ex;
+}
+
+main ul {
+  max-width: 65ex;
+  line-height: 1.6;
+}
+
+main li {
+  margin-bottom: 0.5rem;
+}
+
+/* Footer styling */
+.usa-footer__primary-section {
+  background-color: var(--color-surface-footer);
+}
+
+.usa-footer__primary-section p {
+  color: white;
+  margin-bottom: 0.5rem;
+  max-width: none;
+}
+
+.usa-footer__primary-section a {
+  color: var(--color-link-footer);
+}
+
+.usa-footer__primary-section a:hover {
+  color: #ffffff;
+}
+
+/* Skip link visibility */
+.usa-skipnav {
+  position: absolute;
+  left: -999px;
+  background: #0050d8;
+  color: white;
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+  z-index: 100000;
+}
+
+.usa-skipnav:focus {
+  left: 0;
+  top: 0;
+}
+
+/* Ensure focus visibility throughout */
+a:focus,
+button:focus,
+.usa-button:focus,
+.usa-button--unstyled:focus,
+.theme-toggle__button:focus {
+  outline: 2px solid #2491ff !important;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px rgba(36, 145, 255, 0.5);
+}
+
+/* Ensure link contrast in dark mode */
+html.theme-dark a {
+  color: #8fd0ff;
+}
+
+html.theme-dark a:hover {
+  color: #ffffff;
+}
+
+/* Preserve sufficient contrast for links inside light summary box in dark mode */
+html.theme-dark .usa-summary-box {
+  background-color: #102a43;
+  border-color: #58b4ff;
+}
+
+html.theme-dark .usa-summary-box__heading,
+html.theme-dark .usa-summary-box__text {
+  color: #f0f0f0;
+}
+
+/* Mobile-first adjustments */
+@media (max-width: 640px) {
+  .hero-section {
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .section-cta {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .section-cta .usa-button {
+    width: 100%;
+    max-width: 24rem;
+  }
+}

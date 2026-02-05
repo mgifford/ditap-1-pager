@@ -1,0 +1,39 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "version": "0.2",
+  "language": "en",
+  "words": [
+    "DITAP",
+    "CivicActions",
+    "USWDS",
+    "Playwright",
+    "axe",
+    "axe-core",
+    "FAR",
+    "GitHub",
+    "WCAG",
+    "Section",
+    "uswds",
+    "ditap",
+    "linkinator",
+    "skipnav"
+  ],
+  "ignorePaths": [
+    "node_modules",
+    "playwright-report",
+    "test-results",
+    ".git",
+    ".github",
+    "package-lock.json",
+    "*.log"
+  ],
+  "enableFiletypes": [
+    "html",
+    "md",
+    "css",
+    "js",
+    "json",
+    "yml",
+    "yaml"
+  ]
+}
